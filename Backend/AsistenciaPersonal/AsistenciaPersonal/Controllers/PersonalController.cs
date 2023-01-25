@@ -19,8 +19,20 @@ namespace AsistenciaPersonal.Controllers
         [HttpGet]
         public IActionResult ObtenerPersonal()
         {
+            try
+            {
 
-            return Ok(personalBL.ObtenerPersonal());
+                var resp = Ok(personalBL.ObtenerPersonal());
+
+
+                return resp;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
